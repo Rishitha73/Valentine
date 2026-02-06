@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day ❤️</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">❤️ Valentine's Day</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#message" class="nav-link">Message</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#counter" class="nav-link">Counter</a></li>
+                <li><a href="#surprise" class="nav-link">Surprise</a></li>
+            </ul>
+            <div class="theme-toggle" id="themeToggle">
+                <span class="theme-icon">🌙</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Name Personalization Input -->
+    <div class="name-input-container" id="nameInputContainer">
+        <div class="name-input-box">
+            <h3>💝 Personalize Your Experience</h3>
+            <input type="text" id="nameInput" placeholder="Enter your loved one's name...">
+            <button id="submitName">Submit</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hearts-background">
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+            <div class="heart"></div>
+        </div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title glow-text">Happy Valentine's Day ❤️</h1>
+            <h2 class="hero-subtitle" id="heroSubtitle">To Someone Special</h2>
+            <p class="hero-message">
+                You are the reason for my smile, the beat of my heart, and the love of my life.
+            </p>
+            <button class="hero-btn" onclick="document.getElementById('message').scrollIntoView({behavior: 'smooth'})">
+                Read My Message
+            </button>
+        </div>
+    </section>
+
+    <!-- Love Message Section -->
+    <section id="message" class="message-section">
+        <div class="container">
+            <h2 class="section-title">A Message From My Heart</h2>
+            <div class="message-box">
+                <p class="typing-text" id="typingText"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Our Beautiful Memories</h2>
+            <p class="section-subtitle">Hover to see the magic ✨</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-title="First Date">
+                    <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=500&h=500&fit=crop" alt="Memory 1">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">First Date</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="Beach Sunset">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=500&h=500&fit=crop" alt="Memory 2">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Beach Sunset</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="Mountain Adventure">
+                    <img src="https://images.unsplash.com/photo-1522543558187-768b6df7c25c?w=500&h=500&fit=crop" alt="Memory 3">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Mountain Adventure</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="City Lights">
+                    <img src="https://images.unsplash.com/photo-1606103836293-0a063a1c7433?w=500&h=500&fit=crop" alt="Memory 4">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">City Lights</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="Coffee Date">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500&h=500&fit=crop" alt="Memory 5">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Coffee Date</span>
+                    </div>
+                </div>
+                <div class="gallery-item" data-title="Forever Together">
+                    <img src="https://images.unsplash.com/photo-1474552226712-ac0f0961a954?w=500&h=500&fit=crop" alt="Memory 6">
+                    <div class="gallery-overlay">
+                        <span class="gallery-title">Forever Together</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+
+    <!-- Love Counter Section -->
+    <section id="counter" class="counter-section">
+        <div class="container">
+            <h2 class="section-title">Time Together</h2>
+            <p class="section-subtitle">Every moment with you is precious</p>
+            
+            <div class="counter-container">
+                <div class="counter-item">
+                    <div class="counter-number" id="days">0</div>
+                    <div class="counter-label">Days</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="hours">0</div>
+                    <div class="counter-label">Hours</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="minutes">0</div>
+                    <div class="counter-label">Minutes</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="seconds">0</div>
+                    <div class="counter-label">Seconds</div>
+                </div>
+            </div>
+            
+            <div class="date-picker">
+                <label for="startDate">Set Your Special Date:</label>
+                <input type="date" id="startDate" value="2024-02-14">
+            </div>
+        </div>
+    </section>
+
+    <!-- Surprise Section -->
+    <section id="surprise" class="surprise-section">
+        <div class="container">
+            <h2 class="section-title">Something Special</h2>
+            <p class="section-subtitle">Click the button below for a surprise! 🎁</p>
+            
+            <button class="surprise-btn" id="surpriseBtn">
+                <span>Click for Surprise</span>
+                <span class="sparkle">✨</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Surprise Modal -->
+    <div id="surpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-heart">💕</div>
+            <h2>You Are Amazing!</h2>
+            <p class="modal-text">
+                You light up my world like nobody else. The way you smile at me gets me overwhelmed. 
+                Every day with you is a blessing, and I can't wait to create more beautiful memories together.
+                I love you more than words can express! ❤️
+            </p>
+            <div class="modal-hearts">
+                <span>💖</span>
+                <span>💝</span>
+                <span>💗</span>
+                <span>💓</span>
+                <span>💕</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-player" id="musicPlayer">
+        <button class="music-btn" id="musicBtn">
+            <span class="music-icon">🎵</span>
+        </button>
+        <audio id="bgMusic" loop>
+            <!-- Add your romantic music file here -->
+            <!-- <source src="romantic-music.mp3" type="audio/mpeg"> -->
+        </audio>
+    </div>
+
+    <!-- Floating Hearts Container -->
+    <div id="floatingHeartsContainer"></div>
+
+    <!-- Confetti Container -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Made with ❤️ for the most special person in my life</p>
+            <p class="footer-small">© 2026 Valentine's Day | Forever & Always</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
